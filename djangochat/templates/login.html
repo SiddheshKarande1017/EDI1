@@ -39,13 +39,32 @@
         flex-direction: column;
         align-items: center;
     }
-    .new-account{
+    .login-box-inner input{
+        padding: 10px;
+        width: 260px;
+        border-radius: 20px;
+        background-color: rgb(255,212,152);
+        border: rgb(255,212,152) ;
+    }
+    a{
         margin-top: 20px;
+        text-decoration: none;
     }
     #sub-btn{
-        width: 10px;
+        margin-top: 30px;
+        width: 90px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: rgb(255,212,152);
+        border: rgb(255,212,152);
+        cursor: pointer;
     }
 
+    .error-message{
+        font-size: 10px;
+
+    }
 
 
 </style>
@@ -68,9 +87,17 @@
                     <p>Password</p>
                     <input type="password" name="password" placeholder="Password">
                     <input type="submit" value="Login" id="sub-btn"><br>
-                    <div class="new-account">
-                        <a href="{% url 'register' %}">Don't have an accoount? </a>
+                    <div class="error-message">
+                        {% for message in messages %}
+                        <h1>
+                            <p> {{message}}</p>
+                        </h1>
+                        {% endfor %}
                     </div>
+                    <div class="new-account" style="text-decoration: none">
+                        <a href="{% url 'register' %}">Don't have an account? </a>
+                    </div>
+
                 </div>
 
 
@@ -80,11 +107,7 @@
     </div>
 
    </div>
-    {% for message in messages %}
-    <h1>
-        <p> {{message}}</p>
-    </h1>
-    {% endfor %}
+
 
 </body>
 

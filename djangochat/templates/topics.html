@@ -9,16 +9,13 @@
         *{
     margin: 0px;
 }
-        .navbar a{
-             text-decoration: none;
-        }
 #id{
     background-color: black;
     height: 30px;
     margin-top: 0px;
     margin: -10;
 }
-a {
+a{
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -40,7 +37,6 @@ a {
 li{
     display: inline;
     margin-left: 30px;
-    text-decoration: none;
 
 }
 li a:hover {
@@ -66,12 +62,11 @@ table, th, td {
 }
 
     </style>
-
 </head>
 <body>
      <div id="navbar">
         <ul>
-            <li><a href="{% url 'home' %}" style="text-decoration: none">Home</a></li>
+              <li><a href="{% url 'home' %}" style="text-decoration: none">Home</a></li>
             <li><a href="http://localhost:3000/">Discuss</a></li>
             <li><a href="{% url 'topics' %}">Topic</a></li>
             <li><a href="{% url 'problems' %}">Problems</a></li>
@@ -87,19 +82,17 @@ table, th, td {
             <thead>
                 <tr>
 
-                    <th scope="col">Question ID</th>
-                    <th scope="col">Topic</th>
-                    <th scope="col">Question Name</th>
-                    <th scope="col">Link</th>
+                    <th scope="col">No</th>
+                    <th scope="col">topic</th>
+                    <th scope="col">Relevent articles</th>
                 </tr>
             </thead>
             <tbody>
 
                 {% for n in mydata %}
                     <tr>
-                        <td>{{ n.q_id }}</td>
+                        <td>{{ n.id }}</td>
                         <td>{{ n.topic }}</td>
-                        <td>{{ n.q_name}}</td>
                         <td>
                             <button class="btn btn-outline btn-info"><a href="{{n.link}}">More Info</a></button>
 
@@ -109,13 +102,13 @@ table, th, td {
             </tbody>
         </table>
     </div>
-    <div class ="footer">
+    <div id="navbar">
         <ul>
             <li><a href="#">Connect</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Instagram</a></li>
-            
+
 
         </ul>
     </div>

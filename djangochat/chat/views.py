@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm
 from django.contrib import messages
+from .models import Problem, Sources
 # Create your views here.
 def home(request):
     return render(request,'index.html')
@@ -34,8 +35,19 @@ def loginuser(request):
     return render(request,"login.html",context)
 
 def problems(request):
-    return render(request,"problem.html")
+    mydata = Problem.objects.all().values()
+    data={
+        'mydata':mydata
+    }
+    return render(request,"problem.html",data)
 
 def logoutuser(request):
     logout(request)
     return redirect('register')
+
+def topics(request):
+    mydata=Sources.objects.all().values()
+    data={
+        'mydata':mydata
+    }
+    return render(request,"topics.html",data)
