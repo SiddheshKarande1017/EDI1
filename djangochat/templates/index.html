@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForLife</title>
+    <style>
+        *{
+    margin: 0px;
+}
+#id{
+    background-color: black;
+    height: 30px;
+    margin-top: 0px;
+    margin: -10;
+}
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+}
+.login-container:hover{
+    background-color: white;
+    color: black;
+}
+.login-container{
+    margin-left: 1200px;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+li a:active{
+    background-color: white;
+    color: black;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background-color: black;
+    align-items: center;
+
+}
+.website-name-div{
+    width: 100%;
+    text-align: center;
+
+}
+.website-name{
+    justify-content: center;
+    color: white;
+    padding: 40px;
+    font-size: 2cm;
+}
+.website-content{
+    justify-content: center;
+    color: white;
+    padding: 5px;
+}
+.actual-content{
+    background-image: url("img11.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 19.5cm;
+
+}
+    </style>
+</head>
+<body>
+    <div id="navbar"> 
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discuss</a></li>
+            <li><a href="#">Topic</a></li>
+            <li><a href="{% url 'problems' %}">Problems</a></li>
+            <div>
+                <button class="login-container"><a href="{% url 'logout' %}">logout</a></button>
+            </div>
+
+        </ul>
+    </div>
+    <div class="actual-content">
+        <div>
+            <div class="website-name-div">
+                <h1 class="website-name">CodeForLife</h1>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+
+            </div>
+            
+
+
+        </div>
+
+    </div>
+    <div id="navbar"> 
+        <ul>
+            <li><a href="#">Connect</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            
+
+        </ul>
+    </div>
+</body>
+</html>
