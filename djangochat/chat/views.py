@@ -3,7 +3,10 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm
 from django.contrib import messages
 from .models import Problem, Sources
+from django.contrib.auth.decorators import login_required
 # Create your views here.
+
+@login_required(login_url='login')
 def home(request):
     return render(request,'index.html')
 
@@ -34,6 +37,7 @@ def loginuser(request):
     context = {}
     return render(request,"login.html",context)
 
+@login_required(login_url='login')
 def problems(request):
     mydata = Problem.objects.all().values()
     data={
@@ -45,9 +49,14 @@ def logoutuser(request):
     logout(request)
     return redirect('register')
 
+@login_required(login_url='login')
 def topics(request):
     mydata=Sources.objects.all().values()
     data={
         'mydata':mydata
     }
     return render(request,"topics.html",data)
+
+@login_required(login_url='login')
+def discuss(request):
+    return redirect('http://localhost:3000/')

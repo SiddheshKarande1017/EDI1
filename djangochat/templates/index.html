@@ -90,10 +90,10 @@ ul{
 
 </head>
 <body>
-    <div class = "mynav"id="navbar">
+    <div class = "mynav" id="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="http://localhost:3000/">Discuss</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'discuss' %}">Discuss</a></li>
             <li><a href="{% url 'topics' %}">Topic</a></li>
             <li><a href="{% url 'problems' %}">Problems</a></li>
             <li><button class="login-container"><a href="{% url 'logout' %}">logout</a></button></li>

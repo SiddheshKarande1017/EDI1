@@ -9,29 +9,40 @@
         *{
     margin: 0px;
 }
+.mynav{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+
+}
 #id{
-    background-color: black;
     height: 30px;
     margin-top: 0px;
     margin: -10;
+    width: 100%;
+
 }
 a{
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: white;
+    color: black;
+
 
 }
 .login-container:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(231, 136, 12);
+    color: white;
+
 }
 .login-container{
-    margin-left: 1200px;
-    padding: 12px 15px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
+    background-color: antiquewhite;
+    /*margin-left: 960px;*/
+    /*padding: 12px 15px;*/
+    /*cursor: pointer;*/
+    /*border-color: antiquewhite;*/
+    /*border-radius: 10px*/
+    align-items: end;
+    float: right;
 
 }
 li{
@@ -40,19 +51,17 @@ li{
 
 }
 li a:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(231, 136, 12);
+    color: white;
 }
 li a:active{
-    background-color: white;
-    color: black;
+    background-color: rgb(225, 133, 13);
 }
 ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     padding: 0;
-    background-color: black;
     align-items: center;
 
 }
@@ -64,15 +73,14 @@ table, th, td {
     </style>
 </head>
 <body>
-     <div id="navbar">
+     <div class = "mynav" id="navbar">
         <ul>
               <li><a href="{% url 'home' %}" style="text-decoration: none">Home</a></li>
-            <li><a href="http://localhost:3000/">Discuss</a></li>
+            <li><a href="{% url 'discuss' %}">Discuss</a></li>
             <li><a href="{% url 'topics' %}">Topic</a></li>
             <li><a href="{% url 'problems' %}">Problems</a></li>
-            <div>
-                <button class="login-container"><a href="{% url 'logout' %}">logout</a></button>
-            </div>
+            <li><button class="login-container"><a href="{% url 'logout' %}">logout</a></button></li>
+
 
         </ul>
     </div>
