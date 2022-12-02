@@ -60,3 +60,52 @@ def topics(request):
 @login_required(login_url='login')
 def discuss(request):
     return redirect('http://localhost:3000/')
+
+def pfilter(request):
+    mydata = Problem.objects.all().values()
+    k=1
+    d = []
+    if(request.method == 'POST'):
+        res_rate=request.POST.get("Rate",None)
+        print(res_rate)
+        if(res_rate==None):
+            k=0
+        for i in mydata:
+            print(i)
+            if(i['topic']==res_rate):
+                d.append(i)
+    if(k==1):
+        data = {
+            'mydata': d
+        }
+        return render(request,"problem.html",data)
+    data = {
+        'mydata': mydata
+    }
+    return render(request,"problem.html",data)
+
+def tfilter(request):
+    mydata = Sources.objects.all().values()
+    k=1
+    d = []
+    if(request.method == 'POST'):
+        res_rate=request.POST.get("Rate",None)
+        print(res_rate)
+        if(res_rate==None):
+            k=0
+        for i in mydata:
+            print(i)
+            if(i['topic']==res_rate):
+                d.append(i)
+    if(k==1):
+        data = {
+            'mydata': d
+        }
+        return render(request,"topics.html",data)
+    data = {
+        'mydata': mydata
+    }
+    return render(request,"topics.html",data)
+
+
+
