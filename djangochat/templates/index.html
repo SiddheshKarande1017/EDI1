@@ -5,11 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeForLife</title>
+    
+
     <style>
-        *{
+      
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+    
+    .intro button {
+      background-color:  antiquewhite;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+    *{
     margin: 0px;
-}
-.mynav{
+     }
+    .mynav{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: antiquewhite;
 
@@ -80,7 +128,6 @@ ul{
     padding: 5px;
 }
 .actual-content{
-    /* background-image: url("img11.jpeg"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 19.5cm;
@@ -94,10 +141,62 @@ ul{
     position: fixed;
     bottom: 0;
 }
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.active {
+  background-color: #717171;
+}
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.flex-container > div {
+  background-color: #FFE9B1;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.about-me {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-top: 2px solid #eeeeee;
+}
+
+.about-me img {
+  width: 250px;
+  max-width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+
+.about-me-text p {
+  font-size: 20px;
+  margin: 15px 0;
+} 
+
+
     </style>
 
 </head>
+
 <body>
+
+ 
+
     <div class = "mynav" id="navbar">
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -109,31 +208,47 @@ ul{
 
         </ul>
     </div>
-    <div class="actual-content">
-        <div>
-            <div class="website-name-div">
-                <h1 class="website-name">CodeForLife</h1>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <p class="website-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur distinctio modi delectus. Excepturi ex amet dolor nisi magni consectetur delectus! Excepturi magnam voluptatum tempora porro reprehenderit fugiat, dolorem eveniet.</p>
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
 
-            </div>
-            
-
-
-        </div>
-
+    <div class="intro">
+      <h1>Code For Life</h1>
+      <p>Your potential, Our passion.</p>
+      <p>Your Vision, Our Future.</p>
+        
+      <button>Learn More</button>
     </div>
+   
+    <br><br>
+    <h1>WHAT DO WE PROVIDE?</h1>
+    <br><br>
+
+    <div class="flex-container">
+      <div><img src="https://media.istockphoto.com/id/1269039522/vector/friends-is-hugging-icon-friendship-concept-vector-on-isolated-white-background-eps-10.jpg?s=612x612&w=0&k=20&c=OMeYb8kmTNUoTPEoR91RZQwg0MPLo3ZKQZvSbs981as=" width="250" height="250" >
+      <h3> Community </h3></div>
+      <div><img src="https://static.vecteezy.com/system/resources/previews/005/191/909/original/anxiety-glyph-icon-silhouette-symbol-panic-attack-nervous-tension-stress-head-problems-emotional-stress-symptom-negative-space-isolated-illustration-vector.jpg" width="250" height="250">
+      <h3> Problems </h3></div>
+      <div><img src="https://i.pinimg.com/236x/af/21/a9/af21a93bf2bed8ce1239c35a223b8b91.jpg" width="250" height="250">
+      <h3> Solutions </h3></div>
+      <div><img src="https://static.vecteezy.com/system/resources/thumbnails/000/600/565/small/ICON060.jpg" width="250" height="250">
+      <h3> Contests </h3></div>
+  
+    </div>
+    <br><br>
+
+    <div class="about-me">
+      <div class="about-me-text">
+        <br>
+        <h1>ABOUT US</h1>
+        <br>
+        <p>CodeForLife is a social network dedicated to programming enthusiast. </p><p>However, it also provides a forum for frequent problem-solving discussions, </p><p>the development of participants' talents, and contest preparation.</p>
+      </div>
+      <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-99786,resizemode-1,msid-76635850/small-biz/sme-sector/cia-comes-together-over-the-distressed-assets-funds-subordinate-debt-for-msmes-.jpg" alt="me">
+    </div>
+    <br>
+
+
+
+
+
     <div class="footer"> 
         <ul>
             <li><a href="#">Connect</a></li>
